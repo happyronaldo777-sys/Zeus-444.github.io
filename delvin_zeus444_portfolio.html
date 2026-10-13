@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delvin | ZEUS444 - Content Creator & Gamer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neonCyan: '#00f3ff',
+                        neonPurple: '#a855f7',
+                        neonPink: '#ec4899',
+                        darkBg: '#0b0f19',
+                        darkCard: '#111827',
+                    },
+                    fontFamily: {
+                        heading: ['Orbitron', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 20px rgba(0, 243, 255, 0.4)',
+                        'neon-purple': '0 0 20px rgba(168, 85, 247, 0.4)',
+                        'neon-pink': '0 0 20px rgba(236, 72, 153, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glow-text {
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+        }
+        .purple-glow-text {
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 243, 255, 0.3);
+        }
+        .neon-border {
+            position: relative;
+        }
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #00f3ff, #a855f7, #ec4899);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.6;
+            filter: blur(8px);
+            transition: opacity 0.3s;
+        }
+        .neon-border:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card px-6 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#hero" class="font-heading text-2xl font-black tracking-wider text-white flex items-center gap-2">
+                <span class="text-neonCyan">&lt;</span>ZEUS<span class="text-neonPurple">444</span><span class="text-neonCyan">/&gt;</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#about" class="hover:text-neonCyan transition-colors">About</a>
+                <a href="#skills" class="hover:text-neonCyan transition-colors">Skills</a>
+                <a href="#socials" class="hover:text-neonCyan transition-colors">Socials</a>
+                <a href="#contact" class="hover:text-neonCyan transition-colors">Contact</a>
+            </div>
+
+            <a href="#contact" class="hidden md:inline-block px-5 py-2 rounded-full font-heading text-sm font-bold bg-gradient-to-r from-neonCyan to-neonPurple text-black hover:shadow-neon-cyan transition-all transform hover:-translate-y-0.5">
+                LET'S TALK
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-300 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-800 flex flex-col gap-4 font-medium text-center">
+            <a href="#about" class="hover:text-neonCyan transition-colors py-1">About</a>
+            <a href="#skills" class="hover:text-neonCyan transition-colors py-1">Skills</a>
+            <a href="#socials" class="hover:text-neonCyan transition-colors py-1">Socials</a>
+            <a href="#contact" class="hover:text-neonCyan transition-colors py-1">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="min-h-screen pt-28 pb-16 flex items-center justify-center relative overflow-hidden px-6">
+        <!-- Background Glow Effects -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-neonCyan opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-neonPurple opacity-15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center z-10">
+            <!-- Hero Content -->
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-800/80 border border-neonCyan/30 text-neonCyan text-xs tracking-wider uppercase font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-neonCyan animate-ping"></span>
+                    Available for Collaborations
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-heading font-black tracking-tight leading-tight">
+                    Hey, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-neonPurple to-neonPink glow-text">DELVIN</span>
+                </h1>
+                
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-300 font-heading">
+                    Known as <span class="text-neonCyan">ZEUS444</span> | Content Creator & Gamer
+                </h2>
+
+                <p class="text-gray-400 text-base sm:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
+                    Passionate gamer and digital content creator crafting engaging gaming highlights, entertainment reviews, and immersive live streams.
+                </p>
+
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                    <a href="#socials" class="px-7 py-3 rounded-xl font-heading text-sm font-bold bg-gradient-to-r from-neonCyan to-neonPurple text-black hover:shadow-neon-cyan transition-all transform hover:-translate-y-1">
+                        <i class="fa-solid fa-play mr-2"></i> Watch Content
+                    </a>
+                    <a href="#contact" class="px-7 py-3 rounded-xl font-heading text-sm font-bold border border-neonPurple/50 text-white hover:bg-neonPurple/10 hover:border-neonPurple transition-all transform hover:-translate-y-1">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Picture / Character Card -->
+            <div class="flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-neonCyan via-neonPurple to-neonPink rounded-3xl blur-md opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                    <div class="relative w-72 h-80 sm:w-80 sm:h-96 rounded-3xl bg-darkCard overflow-hidden border border-gray-800 flex flex-col items-center justify-center p-6 text-center">
+                        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full border-4 border-neonCyan/80 p-1 mb-4 shadow-neon-cyan">
+                            <img src="https://placehold.co/400x400/111827/00f3ff?text=ZEUS444" alt="Delvin ZEUS444 Profile" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-white">DELVIN</h3>
+                        <p class="text-xs font-mono text-neonCyan mt-1">@ZEUS444_OFFICIAL</p>
+                        <div class="flex gap-3 mt-4 text-gray-400 text-sm">
+                            <span class="px-3 py-1 bg-gray-800 rounded-lg border border-gray-700"><i class="fa-solid fa-gamepad text-neonPurple mr-1"></i> Gamer</span>
+                            <span class="px-3 py-1 bg-gray-800 rounded-lg border border-gray-700"><i class="fa-solid fa-video text-neonPink mr-1"></i> Creator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-6 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+                    ABOUT <span class="text-neonCyan">ME</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-neonCyan to-neonPurple mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-neonCyan/10 border border-neonCyan/30 rounded-xl flex items-center justify-center text-neonCyan text-2xl mb-6">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-white">Gaming Advocate</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Extensive experience in competitive and casual gaming, producing strategy guides, highlight reels, and high-energy gameplay.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-neonPurple/10 border border-neonPurple/30 rounded-xl flex items-center justify-center text-neonPurple text-2xl mb-6">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-white">Movie Enthusiast</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Deep love for cinema, sharing insightful movie reviews, breakdowns, cinematic edits, and pop culture discussions.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-neonPink/10 border border-neonPink/30 rounded-xl flex items-center justify-center text-neonPink text-2xl mb-6">
+                        <i class="fa-solid fa-photo-film"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-white">Content Creation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Building a strong community through video editing, creative storytelling, and social media engagement across platforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 bg-darkCard/50 border-y border-gray-800/80">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+                    SKILLS & <span class="text-neonPurple">TOOLS</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-neonPurple to-neonPink mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-darkCard border border-gray-800 hover:border-neonCyan transition-all">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-heading text-sm text-gray-200">Video Editing</span>
+                        <span class="text-neonCyan font-mono text-sm">90%</span>
+                    </div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-neonCyan to-neonPurple h-full rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-darkCard border border-gray-800 hover:border-neonPurple transition-all">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-heading text-sm text-gray-200">Gaming & Streaming</span>
+                        <span class="text-neonPurple font-mono text-sm">95%</span>
+                    </div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-neonPurple to-neonPink h-full rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-darkCard border border-gray-800 hover:border-neonPink transition-all">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-heading text-sm text-gray-200">Content Strategy</span>
+                        <span class="text-neonPink font-mono text-sm">85%</span>
+                    </div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-neonPink to-neonCyan h-full rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-darkCard border border-gray-800 hover:border-neonCyan transition-all">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-heading text-sm text-gray-200">Community Building</span>
+                        <span class="text-neonCyan font-mono text-sm">88%</span>
+                    </div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-neonCyan to-neonPurple h-full rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="socials" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+                    CONNECT ON <span class="text-neonPink">SOCIALS</span>
+                </h2>
+                <p class="text-gray-400 mt-2">Follow my journey across gaming and entertainment</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-neonPink to-neonCyan mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Gaming Instagram -->
+                <div class="glass-card p-8 rounded-2xl text-center relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-tr from-purple-600 to-pink-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2">Gaming Channel</h3>
+                    <p class="text-gray-400 text-sm mb-6">Clips, live updates, gaming highlights, and setups.</p>
+                    <a href="https://instagram.com" target="_blank" class="inline-block w-full py-3 rounded-xl border border-pink-500/50 text-pink-400 font-heading text-xs font-bold hover:bg-pink-500 hover:text-white transition-all">
+                        FOLLOW GAMING IG
+                    </a>
+                </div>
+
+                <!-- YouTube Channel -->
+                <div class="glass-card p-8 rounded-2xl text-center relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
+                    <div class="w-16 h-16 mx-auto bg-red-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2">YouTube Channel</h3>
+                    <p class="text-gray-400 text-sm mb-6">Long-form gameplay, tutorials, and movie reaction videos.</p>
+                    <a href="https://youtube.com" target="_blank" class="inline-block w-full py-3 rounded-xl border border-red-500/50 text-red-400 font-heading text-xs font-bold hover:bg-red-600 hover:text-white transition-all">
+                        SUBSCRIBE YOUTUBE
+                    </a>
+                </div>
+
+                <!-- Movie Instagram -->
+                <div class="glass-card p-8 rounded-2xl text-center relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-red-500"></div>
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-tr from-amber-500 to-red-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2">Movie Reviews</h3>
+                    <p class="text-gray-400 text-sm mb-6">Cinematic edits, reviews, and pop-culture news.</p>
+                    <a href="https://instagram.com" target="_blank" class="inline-block w-full py-3 rounded-xl border border-amber-500/50 text-amber-400 font-heading text-xs font-bold hover:bg-amber-500 hover:text-white transition-all">
+                        FOLLOW MOVIE IG
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 bg-darkCard/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">
+                    GET IN <span class="text-neonCyan">TOUCH</span>
+                </h2>
+                <p class="text-gray-400 mt-2">Have a question or want to collaborate? Send a message!</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-neonCyan to-neonPurple mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Notification Banner -->
+            <div id="form-status" class="hidden mb-6 p-4 rounded-xl text-center text-sm font-semibold"></div>
+
+            <form id="contact-form" class="glass-card p-8 rounded-3xl space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-heading text-gray-400 uppercase mb-2">Your Name</label>
+                        <input type="text" id="name" required placeholder="John Doe" class="w-full bg-gray-900/80 border border-gray-700 focus:border-neonCyan rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-heading text-gray-400 uppercase mb-2">Your Email</label>
+                        <input type="email" id="email" required placeholder="john@example.com" class="w-full bg-gray-900/80 border border-gray-700 focus:border-neonCyan rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-heading text-gray-400 uppercase mb-2">Subject</label>
+                    <input type="text" id="subject" required placeholder="Sponsorship / Collaboration" class="w-full bg-gray-900/80 border border-gray-700 focus:border-neonCyan rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-heading text-gray-400 uppercase mb-2">Message</label>
+                    <textarea id="message" rows="5" required placeholder="Hi Delvin, I loved your latest video..." class="w-full bg-gray-900/80 border border-gray-700 focus:border-neonCyan rounded-xl px-4 py-3 text-white text-sm focus:outline-none transition-colors resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl font-heading text-sm font-bold bg-gradient-to-r from-neonCyan via-neonPurple to-neonPink text-black hover:shadow-neon-cyan transition-all transform hover:-translate-y-0.5">
+                    SEND MESSAGE
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-gray-800/80 text-center text-gray-500 text-xs">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; <span id="year"></span> Delvin (ZEUS444). All rights reserved.
+            </div>
+            <div class="flex gap-4 text-base text-gray-400">
+                <a href="https://instagram.com" target="_blank" class="hover:text-neonCyan"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank" class="hover:text-neonPink"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-neonPurple"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking any link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            formStatus.className = "mb-6 p-4 rounded-xl text-center text-sm font-semibold bg-neonCyan/20 text-neonCyan border border-neonCyan/40";
+            formStatus.innerText = "Thank you! Your message has been sent successfully.";
+            formStatus.classList.remove('hidden');
+
+            contactForm.reset();
+
+            setTimeout(() => {
+                formStatus.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
